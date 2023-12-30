@@ -2,12 +2,12 @@
 
 class signup extends Dbh{
 
-    protected function setUser($uid, $pwd, $email){
-        $stmt = $this->connect()->prepare("INSERT INTO users (users_uid, users_pwd, users_email) VALUES(?, ?, ?)");
+    protected function setUser($uid, $email, $pwd){
+        $stmt = $this->connect()->prepare("INSERT INTO users (users_uid, users_email, users_pwd) VALUES(?, ?, ?)");
 
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-        if (!$stmt->execute(array($uid, $hashedPwd, $email))) {
+        if (!$stmt->execute(array($uid, $email, $hashedPwd))) {
             $stmt = null;
             header("location: ../header.php?error=stmtfailed");
             exit();

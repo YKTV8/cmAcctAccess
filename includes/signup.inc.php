@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST["submit"])) {
-    echo "yes, submitted";
+
     # code... grabs data
     $uid = $_POST["uid"];
     $name = $_POST["name"];

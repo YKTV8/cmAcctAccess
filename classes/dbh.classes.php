@@ -12,5 +12,4 @@ class Dbh {
             die();
         }
     }
-
 }

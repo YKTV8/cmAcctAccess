@@ -33,7 +33,7 @@ class signupContr extends signup {
         header("location: ../header.php?error=mismatchpwd");
         exit();
     }
-    if ($this->uidTakenCheck() == false) {
+    if (!$this->uidTakenCheck() == false) {
         header("location: ../header.php?error=uidtaken");
         exit();
     }
