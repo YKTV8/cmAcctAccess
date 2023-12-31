@@ -6,13 +6,13 @@ class signupContr extends signup {
     private $pwd;
     private $pwdRepeat;
     private $email;
-    private $name;
+    #private $name;
     // variable below are grabbed from the data the users enters in. Not from the properies above. 
-    public function __construct($uid, $pwd, $pwdRepeat, $email, $name){
+    public function __construct($uid, $pwd, $pwdRepeat, $email){
         $this->uid = $uid;
         $this->pwd = $pwd;
         $this->pwdRepeat = $pwdRepeat;
-        $this->name = $name;
+       # $this->name = $name;
         $this->email = $email;
     }
 
