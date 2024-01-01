@@ -1,36 +1,31 @@
 <?php
 
-class signupContr extends signup {
+class loginContr extends login {
 
     private $uid;
     private $pwd;
-    private $pwdRepeat;
-    private $email;
-    private $name;
     // variable below are grabbed from the data the users enters in. Not from the properies above. 
-    public function __construct($uid, $pwd, $pwdRepeat, $email, $name){
+    public function __construct($uid, $pwd){
         $this->uid = $uid;
         $this->pwd = $pwd;
-        $this->pwdRepeat = $pwdRepeat;
-        $this->name = $name;
-        $this->email = $email;
     }
 
-    public function signupUser(){
+    public function loginUser(){
         if (!$this->emptyInput() == false) {
             header("location: ../header.php?error=emptyinput");
             exit();
         }
 
-    $this->setUser($this->uid, $this->pwd, $this->email);
+    $this->getUser($this->uid, $this->pwd);
 
     }
 
     private function emptyInput(){
         $result;
-        if (empty($this->uid) || empty($this->pwd) || empty($this->name)) {
+        if (empty($this->uid) || empty($this->pwd)) {
             $result = false;
-        } else {
+        } 
+        else {
             $result = true;
         }
         return $result;
