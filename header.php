@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +23,7 @@
                         <label for="uid"></label>
                         <input type="text" id="username" name="uid" required placeholder="username">
                     </div>                                                                 
-</div>
+                    </div>
                     <br>
                     <div class="emailContainer">
                         <label for="email"></label>
@@ -38,12 +41,18 @@
                         </div>
                         <?php
                         if (isset($_SESSION["userid"])) {
-                            echo "<li><a href='profile.php'>Profile page</a></li>";
-                            echo "<li><a href='logout.php'>log out</a></li>";
-                        } 
-                        else{
-                            // echo "<li><a href='signup.php'>Sign up</a></li>";
-                            ##echo "<li><a href='login.php'>log in</a></li>";
+                            ?>
+
+                            <li><a href='profile.php'>Profile page</a></li>;
+                            <li><a href='includes/logout.inc.php' class='header-login-a'>log out</a></li>;
+                        <?php
+                        }
+                        else
+                        {
+                        ?>
+                            <li><a href='signup.php'>Sign up</a></li>
+                            <li><a href='login.php'>log in</a></li>
+                        <?php
                         }
                         ?>
                        
@@ -62,13 +71,13 @@
         <h2>Log In</h2>
         <section>
             <div class="loginBox">
-                <form action="./includes/login.inc.php" method="####" novalidate>
+                <form action="./includes/login.inc.php" method="post" novalidate>
 
                 <input type="text" name="uid" placeholder="Username/Email"> <br> <br>
                 <input type="password" name="pwd" placeholder="Password..."> <br>
                
-                        <div class="tapInButton">
-                            <button type="Ssubmit" name="Ssubmit">Tap In</button>
+                        <div class="logInButton">
+                            <button type="submit" name="submit">Tap In</button>
                         </div>
                         &nbsp;
                         <br><br>
@@ -82,10 +91,14 @@
             <?php
             if(isset($_GET["error"])){
             if ($_GET["error"] == "emptyinput") {
-                echo "<p> Fill in all fields </p>";
+                echo "<p> Fill in all fields 11</p>";
             }
             else if($_GET["error"] == "wronglogincombo"){
                 echo "<p>Invalid entry, try again.</p>";
+            }
+            else if ($_GET["error"] == "none"){
+                echo "Log in Success";
+                header ("location: ../client.php ");
             }
         }
         ?>
