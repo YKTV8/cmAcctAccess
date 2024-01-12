@@ -40,10 +40,10 @@ session_start();
                             <input type="password" name="pwdrepeat" required id="passwordConfirm" placeholder="Confirm Password">
                         </div>
                         <?php
-                        if (isset($_SESSION["userid"])) {
-                            ?>
-
-                            <li><a href='profile.php'>Profile page</a></li>;
+                        if (isset($_SESSION["userid"])) 
+                        {
+                        ?>
+                            <li><a href='profile.php'><?php echo $_SESSION["userid"]; ?></a></li>;
                             <li><a href='includes/logout.inc.php' class='header-login-a'>log out</a></li>;
                         <?php
                         }
@@ -98,7 +98,7 @@ session_start();
             }
             else if ($_GET["error"] == "none"){
                 echo "Log in Success";
-                header ("location: ../client.php ");
+                header ("location: ../profile.php ");
             }
         }
         ?>

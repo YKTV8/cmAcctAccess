@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vw;
+    background-color: rgb(251, 128, 250);
+    background: radial-gradient(circle, rgba(251,128,250,1) 0%, rgba(10,195,165,1) 0% rgba(251,128,250,1) 100%);
+    overflow-x: hidden;
+}
+header{
+    background-color: aqua;
+}
+header h2{
+    text-align: center;
+}
+section{
+    text-align: center;
+    box-shadow: 12px;
+    height: 15vh;
+    width: 30vw;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.63); 
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.63);
+    border-radius: 4%;
+    background-size: cover;
+}
+.boxes{
+    margin-top: 10%;
+}
+.boxes h3{
+    background-color: rgba(0,0,0,0.63);
+    color: aliceblue;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+/* Individual Section background images */
+#arrival{
+    background-image: url(../img/arrivals.jpg);
+    background-size: cover;
+}
+#departure{
+    background-image: url(../img/departures.jpg);
+    background-size: cover;
+}
+#milk{
+    background-image: url(../img/milk.jpg);
+    background-size: cover;
+}
+#provided_food{
+    background-image: url(../img/providedfood.jpg);
+    background-size: cover;
+}
+#pottylog{
+    background-image: url(../img/potty.jpg);
+    background-size: cover;
+}
+#naptime{
+    background-image: url(../img/sleeping.jpg);
+    background-size: cover;
+}
+#supplies{
+    background-image: url(../img/diapers-unsplash.jpg);
+    background-size: cover;
+}
+.graph{
+    display: flex;
+    padding-top: 5%;
+    padding-left: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    position:relative;
+}
+  
+  .outer {
+    height: 160px;
+    width: 160px;
+    padding: 20px;
+    box-shadow: 
+      6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+      -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+  }
+  
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    border: 1px solid rgb(239, 239, 239);
+    border-radius: 50%;
+    box-shadow: 
+      inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+      inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+      -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+      0.5px 0.5px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  svg {
+    position: absolute;
+    margin-top: -9.8%;
+    margin-left: -5.25%;
+  }
+  
+  circle {
+    fill: none;
+    stroke: green;
+    stroke-width: 20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: anim 2s linear forwards;
+  }
+  
+  @keyframes anim {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  #percent {
+    font-weight: 600;
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+  }
+  
+/* ARRIVAL AND DEPATURE BUTTON */
+button{
+    top: 35%;
+    position: relative;
+    justify-items: center;
+    background-color: rgba(10,195,165,0.85);
+    width: 15rem;
+    height: 5rem;
+
+}
+#time-button, #timeout-button{
+    color: black;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0;
+    padding: .5%;
+    background-color: aqua;
+    width: 100vw;
+    min-height: fit-content;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    padding: 1%;
+}
+nav li{
+    padding-right: 5%;
+}
+footer{
+    text-align: center;
+}
+/* MEDIA QUERY MOBILE PORTRAIT  */
+@media screen and (min-width: 300px) {
+    section{   
+        height: 45vh;
+        width: 80vw;
+    }
+    
+}
+@media screen and (min-width:658px)and (orientation: landscape) {
+    section{
+        width:90vw;
+        height:85vh;
+    }
+    
+}
+/* MEDIA QUERY TABLETS */
+@media screen and (min-width:768px) {
+    section{   
+        height: 35vh;
+        width: 50vw;
+    }
+    
+}
+@media screen and (min-width:1024px) and (orientation: landscape) {
+    section{   
+        height: 45vh;
+        width: 30vw;
+    }
+    
+}
+/* MEDIA QUERY DESKTOP */
+
+@media screen and (min-width:1224px) {
+    body{
+        
+    }
+    
+}
