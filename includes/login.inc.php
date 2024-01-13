@@ -1,11 +1,11 @@
 <?php
 
-if (isset($_POST["submit"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     # code... grabs data
-    $uid = $_POST["uid"];
+    $uid = htmlspecialchars($_POST["uid"], ENT_QUOTES, 'UTF-8');
     // $email = $_POST["email"];
-    $pwd = $_POST["pwd"];
+    $pwd = htmlspecialchars($_POST["pwd"], ENT_QUOTES, 'UTF-8');
  
     # code... Instantiate login class
     include "../classes/dbh.classes.php";

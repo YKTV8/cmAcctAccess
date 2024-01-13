@@ -74,14 +74,14 @@ section{
     padding-left: 50%;
     align-items: center;
     justify-content: center;
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     position:relative;
 }
   
   .outer {
-    height: 160px;
-    width: 160px;
+    height: 120px;
+    width: 120px;
     padding: 20px;
     box-shadow: 
       6px 6px 10px -1px rgba(0, 0, 0, 0.15),
@@ -93,8 +93,8 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     border: 1px solid rgb(239, 239, 239);
     border-radius: 50%;
     box-shadow: 
@@ -106,13 +106,13 @@ section{
   
   svg {
     position: absolute;
-    margin-top: -9.8%;
-    margin-left: -5.25%;
+    margin-top: -7.3%;
+    margin-left: -4%;
   }
   
   circle {
     fill: none;
-    stroke: green;
+    stroke:  rgba(10,195,165,1);
     stroke-width: 20px;
     stroke-dasharray: 450;
     stroke-dashoffset: 450;
@@ -121,18 +121,27 @@ section{
   
   @keyframes anim {
     100% {
-      stroke-dashoffset: 0;
+      stroke-dashoffset: 10;
     }
   }
   
   #percent {
     font-weight: 600;
-    font-size: 45px;
+    font-size: 25px;
     color: rgb(0, 0, 0);
   }
   
 /* ARRIVAL AND DEPATURE BUTTON */
-button{
+#arrival button{
+    top: 35%;
+    position: relative;
+    justify-items: center;
+    background-color: rgba(10,195,165,0.85);
+    width: 15rem;
+    height: 5rem;
+
+}
+#departure button{
     top: 35%;
     position: relative;
     justify-items: center;
@@ -143,6 +152,15 @@ button{
 }
 #time-button, #timeout-button{
     color: black;
+}
+button{
+    border-radius: 15px;
+    
+}
+button:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+    color: aliceblue;
+    transition-duration: 1s;
 }
 nav{
     display: flex;

@@ -92,6 +92,9 @@ session_start();
             <option value="1">228</option>
             <option value="1">294</option>
         </select>
+        <form action="./index.html" method="post">
+            <button type="submit">~~Submit~~</button>
+        </form>
         <div class="graph">
             <div class="outer">
                 <div class="inner">
@@ -118,7 +121,7 @@ session_start();
 
                     </linearGradient>
                     </defs>
-                    <circle cx="80" cy="80" r="70"
+                    <circle cx="60" cy="60" r="50"
                     stroke-linecap="round" />
                 </svg>
 </div>
