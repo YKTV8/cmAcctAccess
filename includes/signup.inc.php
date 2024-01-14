@@ -4,7 +4,7 @@ if (isset($_POST["submit"])) {
     echo "yes, submitted";
     # code... grabs data
     $uid = $_POST["uid"];
-    $name = $_POST["name"];
+    // $name = $_POST["name"];
     $email = $_POST["email"];
     $pwd = $_POST["pwd"];
     $pwdRepeat = $_POST["pwdRepeat"];
@@ -12,12 +12,12 @@ if (isset($_POST["submit"])) {
     include "../classes/dbh.classes.php";
     include "../classes/signup.classes.php";
     include "../classes/signup-contr.classes.php";
-    $signup = new signupContr($uid, $name, $email, $pwd, $pwdRepeat);
+    $signup = new signupContr($uid, $email, $pwd, $pwdRepeat);
     # code... Running error handles and users for signup 
     $signup->signupUser();
 
     # code... bring them back to the front page
-    header("Location: ../header.php?error=none");
+    header("Location: ../header.php?error=Successful");
 
     //52:11
 }

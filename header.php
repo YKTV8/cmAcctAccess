@@ -20,9 +20,9 @@
                         <label for="uid"></label>
                         <input type="text" id="email" name="uid" required placeholder="username">
                     </div>                                                                 
-                        <label for="name"></label>
+                        <!-- <label for="name"></label>
                         <input type="text" id="name" name="name" required placeholder="Name">
-                    </div>
+                    </div> -->
                     <br>
                     <div class="emailContainer">
                         <label for="email"></label>
