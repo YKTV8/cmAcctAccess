@@ -112,16 +112,16 @@ section{
   
   circle {
     fill: none;
-    stroke:  rgba(10,195,165,1);
+    stroke:  rgb(10, 50, 195);
     stroke-width: 20px;
-    stroke-dasharray: 450;
-    stroke-dashoffset: 450;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
     animation: anim 2s linear forwards;
   }
   
   @keyframes anim {
     100% {
-      stroke-dashoffset: 10;
+      stroke-dashoffset: 420;
     }
   }
   
