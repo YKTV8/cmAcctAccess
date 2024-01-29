@@ -21,8 +21,8 @@ session_start();
             <a href="./includes/logout.inc.php">Log Out</a>
             <ul>
                 <li><a href="index.html">About Me</a></li>
-                <li><a href="index2.html">Meet The Staff</a></li>
-                <li><a href="index3.html">Our Facility</a></li>
+                <li><a href="index2.html">Monthly Bulletin</a></li>
+                <li><a href="index3.html">Lunch Menu</a></li>
                 <li><a href="index.html">Daily Logs</a></li>
             </ul>
         </nav>
@@ -141,4 +141,5 @@ session_start();
 </footer>
 </section>
 </body>
+<script src="profile.js"></script>
 </html>

@@ -34,13 +34,15 @@ function captureTime(){
 // Reference to our elements - graph
 let percentage = document.getElementById('percent');
 let counter = 0;
+let surplus = document.getElementById('quantity');
+let usedSurplus = 15;
 
 setInterval(() =>{
   if(counter == 100){
     clearInterval;
   }else{
   counter += 1;
-  percent.innerHTML = `${counter}%`
+  percent.innerHTML = `${surplus}%`
 }
 },25);
 
